@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "stdio.h": "c",
-        "orsh_split_command.h": "c",
-        "stdlib.h": "c"
-    }
-}
