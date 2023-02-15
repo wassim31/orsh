@@ -28,7 +28,18 @@
 
 - for this problem , we will define some static commands , which are help , cd and exit, we do that in orsh_execute function
 
+## Installation
 
+- #### How to use ORSH ?
+
+```bash
+  git clone https://github.com/wassim31/orsh.git
+  cd orsh
+  gcc -o main main.c
+  ./main
+  
+```
+    
 ## FAQ
 
 - ### Why i created that ?
