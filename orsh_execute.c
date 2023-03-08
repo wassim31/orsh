@@ -50,7 +50,7 @@ int orsh_execute(char **args)
 {
   int i;
 
-  if (args[0] == NULL) {
+  if (args == NULL || args[0] == NULL) {
     // An empty command was entered.
     return 1;
   }
