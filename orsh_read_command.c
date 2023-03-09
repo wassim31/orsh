@@ -9,5 +9,6 @@ char *orsh_read_command(void)
 	   fprintf(stderr, "Orsh : getline() failed!\n");
 	   exit(EXIT_FAILURE);
    }
+   if(feof(stdin)) buffer = strdup("exit");
    return buffer;
 }
