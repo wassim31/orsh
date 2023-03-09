@@ -39,5 +39,6 @@ char ** orsh_split_command(char *command)
 
          tokens[position] = NULL; // we null terminate the tokens lists 
          return tokens;
-    } 
+    }
+    return NULL;
 }
