@@ -1,6 +1,5 @@
 #include "orsh_split_command.h"
 
-
 char ** orsh_split_command(char *command)
 {
     int buffSize = ORSH_TOK_BUFSIZE;
@@ -36,9 +35,7 @@ char ** orsh_split_command(char *command)
          This means that subsequent calls to strtok with a NULL pointer 
          as the first argument will continue tokenizing the original string, 
          rather than starting over from the beginning */
-
-         tokens[position] = NULL; // we null terminate the tokens lists 
-         return tokens;
     }
-    return NULL;
+    tokens[position] = NULL;
+    return tokens;
 }
