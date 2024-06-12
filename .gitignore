@@ -21,7 +21,7 @@
 *.a
 *.la
 *.lo
-
+*.gitignore
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
