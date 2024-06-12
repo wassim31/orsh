@@ -11,15 +11,13 @@ void orsh_loop(void)
     char **arguments;
     int status;
 
-    do 
-    {
+    do {
         printf("orsh> ");
         command = orsh_read_command();
         arguments = orsh_split_command(command);
         status = orsh_execute(arguments);
-
         free(command);
         free(arguments);
 
-    } while(status);
+    } while (status);
 }

@@ -1,31 +1,27 @@
 #include "orsh_split_command.h"
 
 
-char ** orsh_split_command(char *command)
+char **orsh_split_command(char *command)
 {
     int buffSize = ORSH_TOK_BUFSIZE;
     int position = 0;
-    char **tokens = (char **) malloc(sizeof(char * ) * buffSize);
-    char * token;
+    char **tokens = (char **) malloc(sizeof(char *)  *buffSize);
+    char *token;
 
-    if(tokens == NULL)
-    {
+    if(tokens == NULL) {
         fprintf(stderr,"ORSH: memory allocation problem , exit and try again !\n");
         exit(EXIT_FAILURE);   
     }
 
     token = strtok(command,ORSH_TOK_DELIM);
-    while(token != NULL)
-    {
+    while(token != NULL) {
         tokens[position] = token;
         position++;
 
-        if(position >= buffSize)
-        {
+        if(position >= buffSize) {
             buffSize*=2;
             tokens = realloc(tokens,buffSize);
-            if(tokens == NULL)
-            {
+            if(tokens == NULL) {
                 fprintf(stderr,"ORSH: reallocation problem");
                 exit(EXIT_FAILURE);
             }
@@ -37,7 +33,7 @@ char ** orsh_split_command(char *command)
          as the first argument will continue tokenizing the original string, 
          rather than starting over from the beginning */
 
-         tokens[position] = NULL; // we null terminate the tokens lists 
-         return tokens;
+        tokens[position] = NULL; // we null terminate the tokens lists 
+        return tokens;
     } 
 }
