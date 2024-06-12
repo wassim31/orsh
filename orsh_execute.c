@@ -49,10 +49,17 @@ int orsh_execute(char **args)
 {
     int i;
 
+<<<<<<< HEAD
     if (args[0] == NULL) {
         // An empty command was entered.
         return 1;
     }
+=======
+  if (args == NULL || args[0] == NULL) {
+    // An empty command was entered.
+    return 1;
+  }
+>>>>>>> 83936e9b01a4d672d9943c7d6eb7932b71348097
 
     for (i = 0; i < numberOfBuiltinCommands ; i++) {
         if (strcmp(args[0], builtin_str[i]) == 0) {

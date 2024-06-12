@@ -28,7 +28,7 @@ char *orsh_read_command(void)
        if (position >= buffSize) {
             buffSize*=2; // we double the size of the buffer
             buffer = realloc(buffer,buffSize); 
-            if(buffer == NULL) {
+            if (buffer == NULL) {
                 fprintf(stderr,"Orsh : Reallocation error , quit and try again!\n");
                 exit(EXIT_FAILURE);
             }
